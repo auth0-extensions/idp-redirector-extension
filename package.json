@@ -78,30 +78,8 @@
     "webpack": "4.29.6"
   },
   "auth0-extension": {
-    "title": "Idp Redirector Extension",
-    "name": "idp-redirector",
-    "version": "1.0.0",
-    "author": "auth0",
     "useBabel": false,
     "useHashName": false,
-    "description": "This extension implements IdP Initiated redirection features.",
-    "type": "application",
-    "category": "end_user",
-    "logoUrl": "https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/v1397191966/68aa3a98f81f5e09a3afb00a73461434.png",
-    "initialUrlPath": "/",
-    "docsUrl": "https://auth0.com/docs",
-    "repository": "https://github.com/auth0-customers/thomson-reuters-idp-redirector.git",
-    "keywords": [
-      "auth0",
-      "extension"
-    ],
-    "auth0": {
-      "createClient": true,
-      "onInstallPath": "/.extensions/on-install",
-      "onUninstallPath": "/.extensions/on-uninstall",
-      "onUpdatePath": "/.extensions/on-update",
-      "scopes": "create:clients create:resource_servers read:clients read:connections"
-    },
     "externals": [
       "auth0-extension-express-tools@2.0.0",
       "auth0-extension-tools@1.4.0",
