@@ -1,7 +1,7 @@
 {
   "title": "IdP Redirector Extension",
   "name": "idp-redirector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "auth0",
   "useHashName": false,
   "description": "This extension implements safe, wildcard based redirection for SAML IdP initiated logins based on URLs from RelayState. The extension is setup as a target OIDC app for SAML IdP initiated connection.",
