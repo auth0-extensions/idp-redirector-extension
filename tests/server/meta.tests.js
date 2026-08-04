@@ -10,8 +10,8 @@ const expect = chai.expect;
 const meta = proxyquire("../../server/routes/meta", {
   "../../webtask.json": {
     version: "1.0.0",
-    repository: "https://github.com/auth0-extension/idp-redirector-extension"
-  }
+    repository: "https://github.com/auth0-extensions/idp-redirector-extension",
+  },
 });
 
 describe("#idp-redirector/meta", () => {
@@ -19,11 +19,11 @@ describe("#idp-redirector/meta", () => {
   app.use("/meta", meta());
 
   describe("GET /meta", () => {
-    it("returns version from webtask.json metadata", done => {
+    it("returns version from webtask.json metadata", (done) => {
       const expectedVersion = "1.0.0";
 
       nock("https://api.github.com")
-        .get("/repos/auth0-extension/idp-redirector-extension/releases/latest")
+        .get("/repos/auth0-extensions/idp-redirector-extension/releases/latest")
         .reply(404);
 
       request(app)
@@ -38,14 +38,14 @@ describe("#idp-redirector/meta", () => {
         });
     });
 
-    it("returns version from github release tag", done => {
+    it("returns version from github release tag", (done) => {
       const expectedVersion = "3.0.0";
 
       nock("https://api.github.com")
-        .get("/repos/auth0-extension/idp-redirector-extension/releases/latest")
+        .get("/repos/auth0-extensions/idp-redirector-extension/releases/latest")
         .reply(200, {
           id: 123456,
-          tag_name: "v" + expectedVersion
+          tag_name: "v" + expectedVersion,
         });
 
       request(app)
